@@ -4,18 +4,35 @@
  * and open the template in the editor.
  */
 package simple.gopay;
+import java.util.Scanner;
 
-/**
- *
- * @author William
- */
+
 public class SimpleGopay {
 
-    /**
-     * @param args the command line arguments
-     */
+    class Data {
+        private String namaPengguna;
+        private double saldoPengguna;
+        
+        public Data (String namaPengguna, double saldoPengguna) {
+            this.namaPengguna = namaPengguna;
+            this.saldoPengguna = saldoPengguna;
+        }
+        
+        public void cekNama () {
+            System.out.println("Nama pengguna : " + this.namaPengguna);
+        }
+        
+        public void cekSaldo () {
+            System.out.println("Saldo pengguna : " + this.saldoPengguna);
+        }
+        
+        
+    }
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner scanner = new Scanner (System.in);
+        
+        
     }
     
 }
