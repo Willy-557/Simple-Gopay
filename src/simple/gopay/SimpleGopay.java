@@ -83,7 +83,27 @@ public class SimpleGopay {
                         if (!databaseUser.containsKey(noTelp)) {
                             System.out.println("Silahkan buat akun terlebih dahulu!");
                         }
-                        
+                        else {
+                            while (true) {
+                                System.out.println("1. Topup");
+                                System.out.println("2. Cek saldo");
+                                System.out.println("3. Pembayaran");
+                                System.out.println("4. Keluar");
+                                
+                                System.out.print(">> ");
+                                int choiceMenu = scanner.nextInt();
+                                
+                                if (choiceMenu == 4){
+                                    System.out.println("Terimakasih!");
+                                    break;
+                                }
+                                else if (choiceMenu > 4 || choiceMenu < 1){
+                                    System.out.println("Harap masukkan nomor menu antara 1 - 4!");
+                                    continue;
+                                }
+                                
+                            }
+                        }
                         break;
                         
                     case 2:
