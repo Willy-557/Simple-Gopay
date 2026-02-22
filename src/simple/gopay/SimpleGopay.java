@@ -112,6 +112,13 @@ public class SimpleGopay {
                                             
                                             break;
                                             
+                                        case 2:
+                                            Data ambilDataPengguna = databaseUser.get(noTelp);
+                                            System.out.println("Nama : " + ambilDataPengguna.cekNama());
+                                            System.out.println("Saldo : " + ambilDataPengguna.cekSaldo());
+                                            
+                                            break;
+                                            
                                         
                                             
                                     }
