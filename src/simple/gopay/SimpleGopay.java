@@ -5,11 +5,9 @@
  */
 package simple.gopay;
 import java.util.Scanner;
+import java.util.HashMap;
 
-
-public class SimpleGopay {
-
-    class Data {
+class Data {
         private String namaPengguna;
         private double saldoPengguna;
         
@@ -52,11 +50,34 @@ public class SimpleGopay {
         }
         
     }
+
+
+public class SimpleGopay {
     
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
+        HashMap <Integer, Data> databaseUser = new HashMap <>();
         
-        
+        while (true) {
+            System.out.println("1. Login");
+            System.out.println("2. Sign in");
+            System.out.println("3. Exit");
+            
+            System.out.print(">> ");
+            int choice = scanner.nextInt();
+            
+            if (choice == 3){
+                System.out.println("Terimakasih!");
+                break;
+            }
+            else if (choice > 3 || choice < 1) {
+                System.out.println("Masukkan nomor menu antara 1 - 3!");
+                continue;
+            }
+            
+            }
+
+        }
     }
     
 }
