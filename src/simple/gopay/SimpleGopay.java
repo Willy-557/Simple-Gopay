@@ -18,15 +18,15 @@ public class SimpleGopay {
             this.saldoPengguna = saldoPengguna;
         }
         
-        public void cekNama () {
-            System.out.println("Nama pengguna : " + this.namaPengguna);
+        public String cekNama () {
+            return this.namaPengguna;
         }
         
-        public void cekSaldo () {
-            System.out.println("Saldo pengguna : " + this.saldoPengguna);
+        public double cekSaldo () {
+            return this.saldoPengguna;
         }
         
-        void topupSaldo (int saldoMasuk) {
+        public void topupSaldo (int saldoMasuk) {
             if (saldoMasuk < 1) {
                 System.out.println("Nominal yang dimasukkan harus diatas 0");
             }
@@ -36,7 +36,7 @@ public class SimpleGopay {
             }
         }
         
-        void paymentMethode (int price) {
+        public void paymentMethode (int price) {
             if (price < 1) {
                 System.out.println("Pembayaran tidak dapat dilakukan dikarenakan nominal yang dimasukkan tidak valid!");
             }
