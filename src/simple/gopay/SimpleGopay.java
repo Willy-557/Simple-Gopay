@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package simple.gopay;
 import java.util.Scanner;
 import java.util.HashMap;
@@ -48,9 +43,7 @@ class Data {
                 }
             }
         }
-        
     }
-
 
 public class SimpleGopay {
     
@@ -127,7 +120,6 @@ public class SimpleGopay {
                                             ambilDataUser.paymentMethode(nominalPembayaran);
                                             
                                             break;
-                                            
                                     }
                                 }
                             }
@@ -150,9 +142,7 @@ public class SimpleGopay {
                         System.out.println("Akun atas nama " + namaUserBaru + "berhasil dibuat!");
                         break;     
                 }
-            
             }
-
         }
     }
 }
