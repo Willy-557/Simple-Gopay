@@ -24,7 +24,7 @@ class Data {
             return this.saldoPengguna;
         }
         
-        public void topupSaldo (int saldoMasuk) {
+        public void topupSaldo (double saldoMasuk) {
             if (saldoMasuk < 1) {
                 System.out.println("Nominal yang dimasukkan harus diatas 0");
             }
@@ -34,7 +34,7 @@ class Data {
             }
         }
         
-        public void paymentMethode (int price) {
+        public void paymentMethode (double price) {
             if (price < 1) {
                 System.out.println("Pembayaran tidak dapat dilakukan dikarenakan nominal yang dimasukkan tidak valid!");
             }
@@ -101,7 +101,21 @@ public class SimpleGopay {
                                     System.out.println("Harap masukkan nomor menu antara 1 - 4!");
                                     continue;
                                 }
-                                
+                                else {
+                                    switch (choiceMenu) {
+                                        case 1:
+                                            System.out.print("Masukkan nominal : ");
+                                            double nominalTopup = scanner.nextDouble();
+                                            
+                                            Data ambilData = databaseUser.get(noTelp);
+                                            ambilData.topupSaldo(nominalTopup);
+                                            
+                                            break;
+                                            
+                                        
+                                            
+                                    }
+                                }
                             }
                         }
                         break;
