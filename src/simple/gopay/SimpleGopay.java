@@ -74,10 +74,37 @@ public class SimpleGopay {
                 System.out.println("Masukkan nomor menu antara 1 - 3!");
                 continue;
             }
+            else {
+                switch (choice) {
+                    case 1 : 
+                        System.out.print("Masukkan no telp : ");
+                        int noTelp = scanner.nextInt();
+                        
+                        if (!databaseUser.containsKey(noTelp)) {
+                            System.out.println("Silahkan buat akun terlebih dahulu!");
+                        }
+                        
+                        break;
+                        
+                    case 2:
+                        System.out.print("Masukkan no telp baru : ");
+                        int noTelpUserBaru = scanner.nextInt();
+                        
+                        scanner.nextLine();
+                        System.out.print("Masukkan nama baru : ");
+                        String namaUserBaru = scanner.nextLine();
+                        
+                        double saldoAwal = 0;
+                        
+                        Data rekBaru = new Data (namaUserBaru, saldoAwal);
+                        databaseUser.put(noTelpUserBaru, rekBaru);
+                        
+                        System.out.println("Akun atas nama " + namaUserBaru + "berhasil dibuat!");
+                        break;     
+                }
             
             }
 
         }
     }
-    
 }
