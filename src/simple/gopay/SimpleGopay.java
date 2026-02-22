@@ -36,7 +36,20 @@ public class SimpleGopay {
             }
         }
         
-        
+        void paymentMethode (int price) {
+            if (price < 1) {
+                System.out.println("Pembayaran tidak dapat dilakukan dikarenakan nominal yang dimasukkan tidak valid!");
+            }
+            else {
+                if (price > this.saldoPengguna) {
+                    System.out.println("Maaf, saldo anda tidak cukup!");
+                }
+                else {
+                    this.saldoPengguna -= price;
+                    System.out.println("Pembayar sebesar Rp " + price + "berhasil dilakukan!");
+                }
+            }
+        }
         
     }
     
