@@ -26,6 +26,17 @@ public class SimpleGopay {
             System.out.println("Saldo pengguna : " + this.saldoPengguna);
         }
         
+        void topupSaldo (int saldoMasuk) {
+            if (saldoMasuk < 1) {
+                System.out.println("Nominal yang dimasukkan harus diatas 0");
+            }
+            else {
+                this.saldoPengguna += saldoMasuk;
+                System.out.println("Berhasil menambahkan saldo sebesar Rp " + saldoMasuk + "ke rekening!");
+            }
+        }
+        
+        
         
     }
     
