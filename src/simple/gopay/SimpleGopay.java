@@ -104,7 +104,7 @@ public class SimpleGopay {
                                 else {
                                     switch (choiceMenu) {
                                         case 1:
-                                            System.out.print("Masukkan nominal : ");
+                                            System.out.print("Masukkan nominal yang di-topupkan : ");
                                             double nominalTopup = scanner.nextDouble();
                                             
                                             Data ambilData = databaseUser.get(noTelp);
@@ -119,7 +119,14 @@ public class SimpleGopay {
                                             
                                             break;
                                             
-                                        
+                                        case 3:
+                                            System.out.print("Masukkan nominal yang di-bayarkan : ");
+                                            double nominalPembayaran = scanner.nextDouble();
+                                            
+                                            Data ambilDataUser = databaseUser.get(noTelp);
+                                            ambilDataUser.paymentMethode(nominalPembayaran);
+                                            
+                                            break;
                                             
                                     }
                                 }
